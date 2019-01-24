@@ -36,13 +36,11 @@ template<typename Iter>
 Iter minIndex(Iter start, Iter end)
 {
 	Iter minIdx = start;
-	auto minNum = *start;
 
 	while (++start != end)
 	{
-		if (*start < minNum)
+		if (*start < *minIdx)
 		{
-			minNum = *start;
 			minIdx = start;
 		}
 	}
